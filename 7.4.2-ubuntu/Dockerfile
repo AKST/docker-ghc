@@ -5,11 +5,13 @@ MAINTAINER Oleg Grenrus <oleg.grenrus@iki.fi>
 RUN apt-get -yq update && apt-get -yq --no-install-suggests --no-install-recommends --force-yes install \
     software-properties-common \
     python-software-properties \
+    curl \
   && apt-add-repository -y "ppa:hvr/ghc" \
   && rm -rf /var/lib/apt/lists/*
 
 # Environment
-ENV CABALVER=1.16
+# ENV CABALVER=1.16
+ENV CABALVER=1.22
 ENV GHCVER=7.4.2
 ENV ALEXVER=3.1.4
 ENV HAPPYVER=1.19.5

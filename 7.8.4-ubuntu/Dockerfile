@@ -5,13 +5,15 @@ MAINTAINER Oleg Grenrus <oleg.grenrus@iki.fi>
 RUN apt-get -yq update && apt-get -yq --no-install-suggests --no-install-recommends --force-yes install \
     software-properties-common \
     python-software-properties \
+    curl \
   && apt-key adv --keyserver hkps.pool.sks-keyservers.net --recv-key 9BEFB442 \
   && apt-add-repository -y 'deb http://download.fpcomplete.com/ubuntu/precise stable main' \
   && apt-add-repository -y "ppa:hvr/ghc" \
   && rm -rf /var/lib/apt/lists/*
 
 # Environment
-ENV CABALVER=1.18
+# ENV CABALVER=1.18
+ENV CABALVER=1.22
 ENV GHCVER=7.8.4
 ENV ALEXVER=3.1.4
 ENV HAPPYVER=1.19.5
