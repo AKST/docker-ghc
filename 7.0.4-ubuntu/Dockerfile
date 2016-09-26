@@ -5,6 +5,7 @@ MAINTAINER Angus Thomsen <aksthomsen@gmail.com>
 RUN apt-get -yq update && apt-get -yq --no-install-suggests --no-install-recommends --force-yes install \
     software-properties-common \
     python-software-properties \
+    fish \
     curl \
   && apt-add-repository -y "ppa:hvr/ghc" \
   && rm -rf /var/lib/apt/lists/*

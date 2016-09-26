@@ -6,6 +6,7 @@ RUN apt-get -yq update && apt-get -yq --no-install-suggests --no-install-recomme
     software-properties-common \
     python-software-properties \
     curl \
+    fish \
   && apt-key adv --keyserver hkps.pool.sks-keyservers.net --recv-key 9BEFB442 \
   && apt-add-repository -y 'deb http://download.fpcomplete.com/ubuntu/precise stable main' \
   && apt-add-repository -y "ppa:hvr/ghc" \
